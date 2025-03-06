@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../redux/authSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";     
+import Swal from "sweetalert2";
 
 
 const Login = () => {
@@ -14,10 +14,10 @@ const Login = () => {
         ? import.meta.env.VITE_APP_API_URL_PRODUCTION
         : import.meta.env.VITE_APP_API_URL_LOCAL;
 
-        console.log(import.meta.env.MODE); // OK: imprime "development" en entorno local
-        console.log('API URL Local:', import.meta.env.VITE_APP_API_URL_LOCAL);
-        console.log('API URL Production:', import.meta.env.VITE_APP_API_URL_PRODUCTION);
-        console.log('API URL Final:', apiUrl);
+    console.log(import.meta.env.MODE); // OK: imprime "development" en entorno local
+    console.log('API URL Local:', import.meta.env.VITE_APP_API_URL_LOCAL);
+    console.log('API URL Production:', import.meta.env.VITE_APP_API_URL_PRODUCTION);
+    console.log('API URL Final:', apiUrl);
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -73,7 +73,7 @@ const Login = () => {
 
         // Para enviar los datos del usuario registrado al server hay que crear un objeto FormData que permita enviar archivos y datos en un solo POST request
         const dataUser = new FormData()
-        dataUser.append('userName', userName)  
+        dataUser.append('userName', userName)
         dataUser.append('age', age)
         dataUser.append('weight', weight)
         dataUser.append('height', height)
@@ -88,7 +88,7 @@ const Login = () => {
             console.error("No se ha seleccionado ninguna imagen.");
             return; // Sal de la función si no hay imagen
         }
-    
+
         try {
             await axios.post(`${apiUrl}/api/users/register`, dataUser, { // ruta local modo desarrollo: 'http://localhost:4000/api/users/register'
                 headers: {
@@ -162,7 +162,7 @@ const Login = () => {
 
             // alert(response.data.message)
             Swal.fire({
-                title: 'Perfecto!',  
+                title: 'Perfecto!',
                 text: 'Login exitoso!',
                 icon: 'success',
                 confirmButtonText: 'Aceptar',
@@ -225,13 +225,13 @@ const Login = () => {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <div className="row w-50 m-auto">
-                <div className="col card my-5 p-4 card-login">
+            <div className="row w-100 m-auto">
+                <div className="col-xl-4 col-md-6 card my-5 p-4 card-login m-auto">
                     <h2 className="text-center">{changeLoginRegister ? 'Sign Up' : 'Log In'}</h2>
                     <form action="" onSubmit={changeLoginRegister ? handleRegister : handleLogin}>
                         {changeLoginRegister && (
                             <div>
-                                <div className="w-50 m-auto my-4">
+                                <div className="w-100 m-auto my-4">
                                     <label className="form-label" htmlFor="gender">Gender:</label>
                                     <select className="form-control" id="gender" onChange={handleSelectGender} >
                                         <option value="" disabled selected>Select your gender</option> {/* Placeholder */}
@@ -240,34 +240,34 @@ const Login = () => {
                                         <option value="other">Other</option> {/* También puedes añadir una opción adicional */}
                                     </select>
                                 </div>
-                                <div className="w-50 m-auto my-4">
+                                <div className="w-100 m-auto my-4">
                                     <label className="form-label" htmlFor="name">Name:</label>
                                     <input className="form-control" type="text" id="name" required onChange={handleInputName} />
                                 </div>
-                                <div className="w-50 m-auto my-4">
+                                <div className="w-100 m-auto my-4">
                                     <label className="form-label" htmlFor="age">Age:</label>
                                     <input className="form-control" type="number" id="age" required onChange={handleInputAge} />
                                 </div>
-                                <div className="w-50 m-auto my-4">
+                                <div className="w-100 m-auto my-4">
                                     <label className="form-label" htmlFor="weight">Weight:</label>
                                     <input className="form-control" type="number" id="weight" required onChange={handleInputWeight} />
                                 </div>
-                                <div className="w-50 m-auto my-4">
+                                <div className="w-100 m-auto my-4">
                                     <label className="form-label" htmlFor="height">Height:</label>
                                     <input className="form-control" type="number" id="height" required onChange={handleInputHeight} />
                                 </div>
-                                <div className="w-50 m-auto my-4">
+                                <div className="w-100 m-auto my-4">
                                     <label className="form-label" htmlFor="height">Profile Image:</label>
                                     <input className="form-control" type="file" id="height" accept="image/*" onChange={handleInputImage} />
                                 </div>
 
                             </div>
                         )}
-                        <div className="w-50 m-auto mb-4">
+                        <div className="w-100 m-auto mb-4">
                             <label className="form-label" htmlFor="email">Email:</label>
                             <input className="form-control" type="email" id="email" required onChange={handleInputEmail} />
                         </div>
-                        <div className="w-50 m-auto mb-4">
+                        <div className="w-100 m-auto mb-4">
                             <label className="form-label" htmlFor="password">Password:</label>
                             <input className="form-control" type="password" id="password" required onChange={handleInputPassword} />
                         </div>
