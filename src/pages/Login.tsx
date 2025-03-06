@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../redux/authSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+import Swal from "sweetalert2";     
 
 
 const Login = () => {
@@ -273,12 +273,12 @@ const Login = () => {
                         </div>
                         {changeLoginRegister ? (
                             <div className="d-flex flex-column">
-                                <button onClick={handleRegister} type="submit" className="btn btn-primary w-25 m-auto my-4">Sign Up</button>
+                                <button onClick={handleRegister} type="submit" className="btn btn-primary  m-auto my-4">Sign Up</button>
                                 <a onClick={() => setChangeLoginRegister(false)} className="text-center"> Already have an account! </a>
                             </div>
                         ) : (
                             <div className="d-flex flex-column">
-                                <button onClick={handleLogin} type="submit" className="btn btn-success w-25 m-auto my-4">Log In</button>
+                                <button onClick={handleLogin} type="submit" className="btn btn-success  m-auto my-4">Log In</button>
                                 <a onClick={() => setChangeLoginRegister(true)} className="text-center"> Create Acount! </a>
                             </div>
                         )}
