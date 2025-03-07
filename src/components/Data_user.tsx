@@ -75,11 +75,11 @@ function Data_user() {
         setIsEditing(!isEditing);// Alterna el modo de edición
     };
 
-    return (
+    return (                                                                        
         <div className="card p-4 card-dataUser m-auto">
             <h4 className="text-center text-light">Data User</h4>
             <div className='d-flex justify-content-between align-items-center p-3'>
-                <img className="profileImage2" src={`http://localhost:4000/uploads/${userProfileImage}`} alt="Profile" />
+                <img className="profileImage2" src={`${apiUrl}/uploads/${userProfileImage}`} alt="Profile" />
                 <img className="bodyHuman" src={userGender === 'female' ? bodyWoman : bodyMan} alt="Body" />
             </div>
             <div className=''>
