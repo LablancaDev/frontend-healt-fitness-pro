@@ -95,8 +95,8 @@ function FitnessGoal() {
             <div className="container text-center position-relative mt-5">
                 <h1 className="display-4 text-warning mb-4 animated-title">Transform Your Body!</h1>
                 <h2 className="mb-4">What is your fitness goal?</h2>
-                <div className="row justify-content-center mt-4">
-                    <div className="col-xs-12 col-md-3 col-xl-4">
+                <div className="row mt-5">
+                    <div className="col-xs-12 col-md-3 col-xl-4 mt-4"> 
                         <Link to="/loseweight" className="text-decoration-none">
                             {/* Cuando el usuario elija su objetivo realizar una inserción a la DB con la opción elegida, para después en su DashBoard poder mostrar mensajes personalizados en referencia a la selección */}
                             <div className="card p-4 text-center text-light border border-light card-dashboard h-100"
@@ -108,7 +108,7 @@ function FitnessGoal() {
                         </Link>
                     </div>
 
-                    <div className="col-xs-12 col-md-3 col-xl-4">
+                    <div className="col-xs-12 col-md-3 col-xl-4 mt-4">
                         <Link to="/gainmuscle" className="text-decoration-none">
                             <div className="card p-4 text-center text-light border border-light card-dashboard h-100"
                                 onClick={() => handleGoalSelection('gainMuscle')}>
@@ -119,7 +119,7 @@ function FitnessGoal() {
                         </Link>
                     </div>
 
-                    <div className="col-xs-12 col-md-3 col-xl-4">
+                    <div className="col-xs-12 col-md-3 col-xl-4 mt-4">
                         <Link to="/maintenance" className="text-decoration-none">
                             <div className="card p-4 text-center text-light border border-light card-dashboard h-100"
                                 onClick={() => handleGoalSelection('maintenance')}>

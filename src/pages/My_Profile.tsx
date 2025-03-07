@@ -16,8 +16,8 @@ const My_Profile = () => {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <div className="row py-5 w-50 m-auto">
-                <div className="col">
+            <div className="row py-5">
+                <div className="col-xl-6 col-md-6 m-auto">
                     <Data_user />
                 </div>
             </div>

@@ -229,7 +229,7 @@ const Login = () => {
                 <div className="col-xl-4 col-md-6 card my-5 p-4 card-login m-auto">
                     <h2 className="text-center">{changeLoginRegister ? 'Sign Up' : 'Log In'}</h2>
                     <form action="" onSubmit={changeLoginRegister ? handleRegister : handleLogin}>
-                        {changeLoginRegister && (
+                        {changeLoginRegister && (  
                             <div>
                                 <div className="w-100 m-auto my-4">
                                     <label className="form-label" htmlFor="gender">Gender:</label>
