@@ -7,7 +7,7 @@
 
 **Health & Fitness Pro** es una aplicación web diseñada para la **monitorización del estado físico** y el **seguimiento del progreso** de los usuarios en su entrenamiento y nutrición. La plataforma permite a los usuarios registrarse, establecer objetivos personalizados y recibir un plan de entrenamiento y nutrición adaptado a sus necesidades.  
 
-🚀 **Estado del proyecto:** 80% completado. Faltan mejoras como cifrado de contraseñas con bcrypt, ajustes en diseño y algunas funcionalidades adicionales.  
+🚀 **Estado del proyecto:** 80% completado, ajustes en diseño y algunas funcionalidades adicionales.  
 
 🔗 **Accede a la aplicación directamente desde:**  
 🌍 **[Health & Fitness Pro - DEMO](https://frontend-healt-fitness-pro.onrender.com/)**  
@@ -90,7 +90,7 @@ Esto permite a cualquier usuario probar la aplicación sin necesidad de instalac
 
 ## 📈 Mejoras futuras  
 
-- 🔒 **Cifrado de contraseñas con bcrypt.**  
+- 🔒 **Autenticación con JWT**: Para proteger las rutas privadas. 
 - 🎨 **Mejoras en el diseño y estilos.**  
 - 📊 **Optimización de gráficos y reportes de progreso.**  
 - 📂 **Mejor estructura en la gestión de archivos y rutas.**  
