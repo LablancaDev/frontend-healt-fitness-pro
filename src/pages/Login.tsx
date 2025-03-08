@@ -231,7 +231,7 @@ const Login = () => {
                     <form action="" onSubmit={changeLoginRegister ? handleRegister : handleLogin}>
                         {changeLoginRegister && (  
                             <div>
-                                <div className="w-100 m-auto my-4">
+                                <div className="w-75 m-auto my-4">
                                     <label className="form-label" htmlFor="gender">Gender:</label>
                                     <select className="form-control" id="gender" onChange={handleSelectGender} >
                                         <option value="" disabled selected>Select your gender</option> {/* Placeholder */}
@@ -240,36 +240,36 @@ const Login = () => {
                                         <option value="other">Other</option> {/* También puedes añadir una opción adicional */}
                                     </select>
                                 </div>
-                                <div className="w-100 m-auto my-4">
+                                <div className="w-75 m-auto my-4">
                                     <label className="form-label" htmlFor="name">Name:</label>
-                                    <input className="form-control" type="text" id="name" required onChange={handleInputName} />
+                                    <input className="form-control" type="text" id="name" placeholder="Enter your name" required onChange={handleInputName} />
                                 </div>
-                                <div className="w-100 m-auto my-4">
+                                <div className="w-75 m-auto my-4">
                                     <label className="form-label" htmlFor="age">Age:</label>
-                                    <input className="form-control" type="number" id="age" required onChange={handleInputAge} />
+                                    <input className="form-control" type="number" id="age" placeholder="Enter your age" required onChange={handleInputAge} />
                                 </div>
-                                <div className="w-100 m-auto my-4">
+                                <div className="w-75 m-auto my-4">
                                     <label className="form-label" htmlFor="weight">Weight:</label>
-                                    <input className="form-control" type="number" id="weight" required onChange={handleInputWeight} />
+                                    <input className="form-control" type="number" id="weight" placeholder="Enter your whight(kg)" required onChange={handleInputWeight} />
                                 </div>
-                                <div className="w-100 m-auto my-4">
+                                <div className="w-75 m-auto my-4">
                                     <label className="form-label" htmlFor="height">Height:</label>
-                                    <input className="form-control" type="number" id="height" required onChange={handleInputHeight} />
+                                    <input className="form-control" type="number" id="height" placeholder="Enter your height" required onChange={handleInputHeight} />
                                 </div>
-                                <div className="w-100 m-auto my-4">
+                                <div className="w-75 m-auto my-4">
                                     <label className="form-label" htmlFor="height">Profile Image:</label>
                                     <input className="form-control" type="file" id="height" accept="image/*" onChange={handleInputImage} />
                                 </div>
 
                             </div>
                         )}
-                        <div className="w-100 m-auto mb-4">
+                        <div className="w-75 m-auto mb-4">
                             <label className="form-label" htmlFor="email">Email:</label>
-                            <input className="form-control" type="email" id="email" required onChange={handleInputEmail} />
+                            <input className="form-control" type="email" id="email" placeholder="Enter your email (example@mail.com)" required onChange={handleInputEmail} />
                         </div>
-                        <div className="w-100 m-auto mb-4">
+                        <div className="w-75 m-auto mb-4">
                             <label className="form-label" htmlFor="password">Password:</label>
-                            <input className="form-control" type="password" id="password" required onChange={handleInputPassword} />
+                            <input className="form-control" type="password" id="password" placeholder="Enter password (min. 6 characters)" required onChange={handleInputPassword} />
                         </div>
                         {changeLoginRegister ? (
                             <div className="d-flex flex-column">
