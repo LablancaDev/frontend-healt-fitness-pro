@@ -25,7 +25,7 @@ const CalorieCalculator: React.FC<CalorieCalculatorProps> = ({ onCalculate }) =>
         const calories = calculateCalories(bmr, activityLevel, goal);
         const macros = calculateMacros(calories, goal);
 
-        console.log({ calories, ...macros });  // Verifica los valores calculados en la consola
+        console.log({ calories, ...macros });  
 
         // Enviamos los resultados al componente padre
         onCalculate({ calories, ...macros, goal });

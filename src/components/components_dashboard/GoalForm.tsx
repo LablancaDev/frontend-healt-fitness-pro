@@ -47,7 +47,7 @@ const GoalForm = () => {
         e.preventDefault();
 
 
-        // Validar si el usuario está registrado
+        // Valido si el usuario está registrado
         if (!userId) {
             alert('You must be logged in to set goals.');
             return;

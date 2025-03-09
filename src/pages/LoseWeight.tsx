@@ -311,7 +311,7 @@ function LoseWeight() {
           <div
             className="col-md-8 p-4"
             style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.2)', // Fondo semitransparente
+              backgroundColor: 'rgba(255, 255, 255, 0.2)', 
               borderRadius: '10px',
             }}
           >

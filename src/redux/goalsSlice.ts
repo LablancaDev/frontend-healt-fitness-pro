@@ -53,7 +53,7 @@ const goalsSlice = createSlice({
             state.physicalGoals = action.payload;
         },
         setActivity: (state, action: PayloadAction<{ activityDate: string; activityType: string; duration: number; caloriesBurned: number; caloriesIngested: number; weight: number }>) => {
-            state.activity = action.payload; // Asegúrate de incluir activityDate aquí
+            state.activity = action.payload; 
         },
         deleteActivity: (state) => {
             state.activity.activityDate = ""
@@ -73,7 +73,6 @@ const goalsSlice = createSlice({
     },
 });
 
-// Exportación de las acciones y el reductor
 export const { setGoalId, setPhysicalGoals, setActivity, resetGoalId, resetUserId, deleteActivity } = goalsSlice.actions;
 export default goalsSlice.reducer;
 

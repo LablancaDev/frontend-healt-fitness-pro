@@ -65,9 +65,6 @@ function Data_user() {
                 console.log('Datos actualizados correctamente', response.data);
 
 
-
-
-
             } catch (error) {
                 console.error('Error al actualizar los datos del usuario:', error);
             }

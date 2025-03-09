@@ -78,7 +78,7 @@ function Results() {
                     // Ocultar el confeti después de 20 segundos
                     setTimeout(() => {
                         setShowConfetti(false);
-                    }, 20000); // 20 segundos
+                    }, 20000); 
                 } else {
                     setGoalAchieved(false);
                 }
@@ -157,10 +157,10 @@ function Results() {
                     text: 'Falló al eliminar las actividades. Asegúrate de estar conectado.',
                     icon: 'error',
                     confirmButtonText: 'Aceptar',
-                    background: '#333', // Fondo oscuro
-                    color: '#fff', // Texto blanco
-                    padding: '2em', // Espaciado interno
-                    backdrop: 'rgba(0, 0, 0, 0.7)', // Fondo del backdrop
+                    background: '#333', 
+                    color: '#fff', 
+                    padding: '2em', 
+                    backdrop: 'rgba(0, 0, 0, 0.7)', 
                 });
             }
         } else {

@@ -64,7 +64,7 @@ const Dashboard: React.FC = () => {
         }
     }, [user_id, activity, physicalGoals]); // Incluyo como dependencia activity desde el estado global para que cuando se ingrese una nueva actividad refleje los cambios en la gráfica de forma automática 
     // IMPORTANTE: con añadir la dependencia de activity en Dashboard ya refleja los cambios en toda la página aunque hayan diferentes componentes, no hay que incluir la dependencia en el resto de componentes, solo en este que es el padre. 
-    // incluyo todas las dependencias donde cualquier cambio en cada una de ella actualizará el estado renderizando la interfaz
+    // incluyo todas las dependencias donde cualquier cambio en cada una de ella actualizará el estado, renderizando la interfaz.
 
 
     if (loading) {

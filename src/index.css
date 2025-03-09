@@ -80,9 +80,8 @@ li {
 
 .fade-out {
   opacity: 0;
-  /* Desvanecer a 0 */
   transition: opacity 2s ease;
-  /* Controlar la duración y el estilo de la transición */
+
 }
 
 /* dashboard */
@@ -119,7 +118,6 @@ li {
 
 .card-dashboard:hover {
   background-color: rgba(255, 208, 0, 0.295);
-  /* Un fondo más oscuro con opacidad */
 }
 
 .cover {
@@ -146,7 +144,7 @@ li {
 .carousel-gifs .carousel-control-prev-icon,
 .carousel-gifs .carousel-control-next-icon {
   filter: invert(1);
-  /* Cambia el color de los iconos de control a negro */
+  /* Cambio el color de los iconos de control a negro */
 }
 
 /* myProfile */

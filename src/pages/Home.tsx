@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Confetti from "react-confetti"; // Importa el componente de confeti
+import Confetti from "react-confetti"; 
 import imgBackHome from "../assets/imgs/gymBackHome.png";
 
 const Home: React.FC = () => {
