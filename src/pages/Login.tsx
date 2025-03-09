@@ -5,6 +5,8 @@ import { setUser } from "../redux/authSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 
 const Login = () => {
@@ -18,6 +20,9 @@ const Login = () => {
     console.log('API URL Local:', import.meta.env.VITE_APP_API_URL_LOCAL);
     console.log('API URL Production:', import.meta.env.VITE_APP_API_URL_PRODUCTION);
     console.log('API URL Final:', apiUrl);
+
+    const { user_id } = useSelector((state: RootState) => state.auth)
+
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -155,6 +160,20 @@ const Login = () => {
         e.preventDefault()
 
         // setMessageLogin(true)
+
+        if (user_id) {
+            Swal.fire({
+                title: 'Error',
+                text: 'Ya hay una sesión iniciada, cierrela antes de inciar una nueva!',
+                icon: 'error',
+                confirmButtonText: 'Aceptar',
+                background: '#333',
+                color: '#fff',
+                padding: '2em',
+                backdrop: 'rgba(0, 0, 0, 0.7)',
+            });
+            return;
+        }
 
         const userDataLogin = { email, password }
         try {
